@@ -1,4 +1,5 @@
 import React from "react";
+import { HighlightCard } from "../../components/HighlightCard";
 
 import { 
   Container, 
@@ -19,7 +20,7 @@ export function Dashboard() {
       <Header>
         <UserWrapper>
           <UserInfo>
-            <Photo source={{uri: 'https://avatars.githubusercontent.com/u/69291914?v=4'}}/>
+            <Photo source={{uri: "https://avatars.githubusercontent.com/u/69291914?v=4"}}/>
             <User>
               <UserGreeting>Olá,</UserGreeting>
               <UserName>Rodrigo</UserName>
@@ -28,6 +29,7 @@ export function Dashboard() {
           <Icon name="power" />
         </UserWrapper>
       </Header>
+      <HighlightCard />
     </Container>
   );
 }
