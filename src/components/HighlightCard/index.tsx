@@ -6,7 +6,7 @@ import {
   Icon,
   Footer,
   Amount,
-  LastTransaction
+  LastTransaction,
  } from "./styles"
 
 export function HighlightCard() {
