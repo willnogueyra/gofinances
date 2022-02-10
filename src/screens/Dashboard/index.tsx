@@ -2,8 +2,8 @@ import React from "react";
 import { HighlightCard } from "../../components/HighlightCard";
 import { TransactionCard } from "../../components/TransactionCard";
 
-import { 
-  Container, 
+import {
+  Container,
   Header,
   UserWrapper,
   UserInfo,
@@ -14,53 +14,88 @@ import {
   Icon,
   HighlightCards,
   Transactions,
+  TransactionList,
   Title
 } from "./styles"
 
 export function Dashboard() {
-  return (
-    <Container>
-      <Header>
-        <UserWrapper>
-          <UserInfo>
-            <Photo source={{uri: "https://lh3.googleusercontent.com/ogw/ADea4I6psjVrUGc0qu_MrjzFVdn01mC8uJjGIyw5dlw8Yw=s83-c-mo"}}/>
-            <User>
-              <UserGreeting>Olá,</UserGreeting>
-              <UserName>Rodrigo</UserName>
-            </User>
-          </UserInfo>
-          <Icon name="power" />
-        </UserWrapper>
-      </Header>
+  const data = [
+    {
+    title : "Desenvolvimeto de Site",
+    amount : "1222",
+    category: {
+      name: 'vendas',
+      icon: 'dollar-sign'
+  },
+  date: "12/02/2021"
+  },
+  {
+    title : "Desenvolvimeto de Site",
+    amount : "1222",
+    category: {
+      name: 'vendas',
+      icon: 'dollar-sign'
+  },
+  date: "12/02/2021"
+  },
+  {
+    title : "Desenvolvimeto de Site",
+    amount : "1222",
+    category: {
+      name: 'vendas',
+      icon: 'dollar-sign'
+  },
+  date: "12/02/2021"
+  }
+]
 
-      <HighlightCards>
-        <HighlightCard 
-          type="up"
-          title="Entradas" 
-          amount="R$ 17.000.00" 
-          lastTransaction="Última entrada dia 13 de Abril de 2020"
-        />
-        <HighlightCard 
-          type="down"
-          title="Saídas" 
-          amount="R$ 16.600.00" 
-          lastTransaction="Última entrada dia 03 de Abril de 2020"
-        />
-        <HighlightCard 
-          type="total"
-          title="Total" 
-          amount="R$ 13.200.00" 
-          lastTransaction="Última entrada dia 7 de Abril de 2020"
-        />
-      </HighlightCards >
+return (
+  <Container>
+    <Header>
+      <UserWrapper>
+        <UserInfo>
+          <Photo source={{ uri: "https://lh3.googleusercontent.com/ogw/ADea4I6psjVrUGc0qu_MrjzFVdn01mC8uJjGIyw5dlw8Yw=s83-c-mo" }} />
+          <User>
+            <UserGreeting>Olá,</UserGreeting>
+            <UserName>Rodrigo</UserName>
+          </User>
+        </UserInfo>
+        <Icon name="power" />
+      </UserWrapper>
+    </Header>
 
-      <Transactions>
-        <Title>
-          Listagem
-        </Title>
+    <HighlightCards>
+      <HighlightCard
+        type="up"
+        title="Entradas"
+        amount="R$ 17.000.00"
+        lastTransaction="Última entrada dia 13 de Abril de 2020"
+      />
+      <HighlightCard
+        type="down"
+        title="Saídas"
+        amount="R$ 16.600.00"
+        lastTransaction="Última entrada dia 03 de Abril de 2020"
+      />
+      <HighlightCard
+        type="total"
+        title="Total"
+        amount="R$ 13.200.00"
+        lastTransaction="Última entrada dia 7 de Abril de 2020"
+      />
+    </HighlightCards >
 
-        <TransactionCard />
-      </Transactions>
-    </Container>
-  );
+    <Transactions>
+      <Title>
+        Listagem
+      </Title>
+
+      <TransactionList 
+        data={data} 
+        renderItem={({item}) => <TransactionCard data={item} />}
+        showsVerticalScrollIndicator={false}
+      />
+    </Transactions>
+  </Container>
+);
 }
