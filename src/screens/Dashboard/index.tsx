@@ -30,7 +30,7 @@ export function Dashboard() {
       id: '1',
       type: 'positive',
       title : "Desenvolvimeto de Site",
-      amount : "1222",
+      amount : "R$ 1222",
       category: {
         name: 'vendas',
         icon: 'dollar-sign'
@@ -41,7 +41,7 @@ export function Dashboard() {
       id: '2',
       type: 'negative',
       title : "Hamburgueria pixy",
-      amount : "53,00",
+      amount : "R$ 53,00",
       category: {
         name: 'Alimentação',
         icon: 'coffee'
@@ -52,7 +52,7 @@ export function Dashboard() {
       id: '3',
       type: 'negative',
       title: "Aluguel de Apartamento",
-      amount : "13,00",
+      amount : "R$ 13,00",
       category: {
         name: 'vendas',
         icon: 'shopping-bag'
