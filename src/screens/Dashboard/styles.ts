@@ -93,7 +93,6 @@ export const TransactionList = styled(FlatList).attrs({
   },
 })`` as React.ComponentType as new <DataListProps>() => FlatList<DataListProps>;
 
-
 // codigo acima é a solução do erro do codigo de baixo feito na aula
 
 /* 
@@ -109,4 +108,9 @@ export const TransactionList = styled(
 })``;
 */
 
+export const LoadContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`
  
